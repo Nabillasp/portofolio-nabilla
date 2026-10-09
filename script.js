@@ -1,103 +1,108 @@
 
-const taskInput = document.getElementById("taskInput");
-const addButton = document.getElementById("addButton");
-const taskList = document.getElementById("taskList");
+document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
 
+    if (menuButton && mobileMenu) {
+        menuButton.addEventListener("click", function () {
+            mobileMenu.classList.toggle("show");
+            const isOpen = mobileMenu.classList.contains("show");
 
-
-function addTask() {
-
-    const taskText = taskInput.value.trim();
-
-    if (taskText === "") {
-        alert("Silakan masukkan tugas terlebih dahulu!");
-        taskInput.focus();
-        return;
+            menuButton.textContent = isOpen ? "✕" : "☰";
+            menuButton.setAttribute("aria-expanded", String(isOpen));
+        });
     }
 
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            const targetId = link.getAttribute("href");
+            const target = document.querySelector(targetId);
 
-    const li = document.createElement("li");
+            if (target) {
+                event.preventDefault();
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
 
-    li.className =
-        "flex items-center gap-3 " +
-        "bg-pink-50 border border-pink-100 " +
-        "p-4 rounded-xl";
+            if (mobileMenu) mobileMenu.classList.remove("show");
 
-
-    const span = document.createElement("span");
-
-    span.textContent = taskText;
-
-    span.className =
-        "text-gray-700 flex-1";
-
-
-
-    const doneButton = document.createElement("button");
-
-    doneButton.type = "button";
-    doneButton.textContent = "✓";
-
-    doneButton.className =
-        "w-9 h-9 rounded-full " +
-        "bg-green-100 text-green-600 " +
-        "hover:bg-green-200 " +
-        "transition font-bold";
-
-
-    doneButton.addEventListener("click", function () {
-
-        span.classList.toggle("line-through");
-        span.classList.toggle("text-gray-400");
-
+            if (menuButton) {
+                menuButton.textContent = "☰";
+                menuButton.setAttribute("aria-expanded", "false");
+            }
+        });
     });
 
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("main section[id]");
 
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(function (link) {
+                        link.classList.toggle(
+                            "active",
+                            link.getAttribute("href") === "#" + entry.target.id
+                        );
+                    });
+                }
+            });
+        }, {
+            rootMargin: "-25% 0px -60% 0px"
+        });
 
-    const deleteButton = document.createElement("button");
-
-    deleteButton.type = "button";
-    deleteButton.textContent = "✕";
-
-    deleteButton.className =
-        "w-9 h-9 rounded-full " +
-        "bg-red-100 text-red-500 " +
-        "hover:bg-red-200 " +
-        "transition font-bold";
-
-
-    deleteButton.addEventListener("click", function () {
-
-        li.remove();
-
-    });
-
-
-    li.appendChild(span);
-    li.appendChild(doneButton);
-    li.appendChild(deleteButton);
-
-
-    taskList.appendChild(li);
-
-
-    taskInput.value = "";
-
-    taskInput.focus();
-}
-
-
-addButton.addEventListener("click", addTask);
-
-
-taskInput.addEventListener("keydown", function (event) {
-
-    if (event.key === "Enter") {
-
-        event.preventDefault();
-
-        addTask();
-
+        sections.forEach(function (section) {
+            observer.observe(section);
+        });
     }
 
+    const taskForm = document.getElementById("taskForm");
+    const taskInput = document.getElementById("taskInput");
+    const taskList = document.getElementById("taskList");
+
+    if (taskForm && taskInput && taskList) {
+        taskForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const text = taskInput.value.trim();
+
+            if (text === "") return;
+
+            const item = document.createElement("li");
+            item.className = "task-item";
+
+            const task = document.createElement("span");
+            task.className = "task-text";
+            task.textContent = text;
+
+            const complete = document.createElement("button");
+            complete.type = "button";
+            complete.className = "task-action task-complete";
+            complete.textContent = "✓";
+            complete.setAttribute("aria-label", "Tandai selesai");
+
+            complete.addEventListener("click", function () {
+                task.classList.toggle("task-done");
+            });
+
+            const remove = document.createElement("button");
+            remove.type = "button";
+            remove.className = "task-action task-delete";
+            remove.textContent = "✕";
+            remove.setAttribute("aria-label", "Hapus tugas");
+
+            remove.addEventListener("click", function () {
+                item.remove();
+            });
+
+            item.append(task, complete, remove);
+            taskList.appendChild(item);
+
+            taskInput.value = "";
+            taskInput.focus();
+        });
+    }
 });

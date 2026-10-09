@@ -1,498 +1,414 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Portfolio | Nabilla Sisilia</title>
-
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body class="bg-pink-50 text-gray-800">
 
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Nabilla<span>.</span></a>
+            <button id="menuButton" class="menu-button" aria-label="Buka menu">☰</button>
 
-    <nav class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
-
-        <div class="max-w-6xl mx-auto px-6 py-4">
-
-            <div class="flex justify-between items-center">
-
-
-                <h1 class="text-xl font-bold text-pink-600">
-
-                    Nabilla<span class="text-gray-800">.</span>
-
-                </h1>
-
-
-
-                <div class="hidden md:flex gap-8 text-sm font-medium">
-
-                    <a href="index.html"
-                       class="text-pink-600 hover:text-pink-700 transition">
-
-                        Home
-
-                    </a>
-
-
-                    <a href="about.html"
-                       class="text-gray-600 hover:text-pink-600 transition">
-
-                        About
-
-                    </a>
-
-                    <a href="education.html"
-                        class="text-gray-600 hover:text-pink-600 transition">
-                         Pendidikan
-
-                    </a>
-
-                    <a href="project.html"
-                       class="text-gray-600 hover:text-pink-600 transition">
-
-                        Project
-
-                    </a>
-
-                    <a href="organisasi.html"
-                        class="text-gray-600 hover:text-pink-600 transition">
-                        Organisasi
-
-                    </a>
-
-                </div>
-
-
-
-                <a href="https://wa.me/6285737237227" target="_blank"
-                   class="hidden md:block bg-pink-500 hover:bg-pink-600
-                          text-white px-5 py-2 rounded-full text-sm
-                          font-medium transition shadow-md shadow-pink-200">
-
-                    Contact
-
-                </a>
-
+            <div id="navMenu" class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#pendidikan" class="nav-link">Pendidikan</a>
+                <a href="#project" class="nav-link">Project</a>
+                <a href="#organisasi" class="nav-link">Organisasi</a>
             </div>
 
+            <a href="#contact" class="contact-button">Contact</a>
         </div>
 
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#pendidikan" class="nav-link">Pendidikan</a>
+            <a href="#project" class="nav-link">Project</a>
+            <a href="#organisasi" class="nav-link">Organisasi</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
     </nav>
 
+    <main>
 
+        <!-- HOME -->
+        <section id="home" class="home-section">
+            <div class="home-decoration decoration-one"></div>
+            <div class="home-decoration decoration-two"></div>
 
-    <section class="min-h-screen flex items-center relative overflow-hidden pt-20">
+            <div class="max-w-6xl mx-auto px-6 w-full relative z-10">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
 
+                    <div>
+                        <p class="text-pink-500 font-semibold mb-4 tracking-widest">
+                            HALO, SAYA 👋
+                        </p>
 
-        <div class="absolute -top-32 -right-32 w-96 h-96
-                    bg-pink-200 rounded-full blur-3xl opacity-60">
-        </div>
+                        <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                            Nabilla
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400">
+                                Sisilia
+                            </span>
+                        </h1>
 
+                        <p class="text-gray-600 text-lg leading-relaxed max-w-xl mb-8">
+                            Saya adalah mahasiswa Ilmu Komputer yang memiliki ketertarikan pada
+                            <span class="text-pink-600 font-semibold">UI/UX Design</span>,
+                            <span class="text-pink-600 font-semibold">Web Development</span>,
+                            dan teknologi.
+                        </p>
 
-        <div class="absolute -bottom-40 -left-32 w-96 h-96
-                    bg-rose-200 rounded-full blur-3xl opacity-60">
-        </div>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#project" class="primary-button">Lihat Project →</a>
+                            <a href="#about" class="secondary-button">Tentang Saya</a>
+                        </div>
 
-
-
-        <div class="max-w-6xl mx-auto px-6 w-full relative z-10">
-
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-
-
-                <div>
-
-
-                    <p class="text-pink-500 font-semibold mb-4 tracking-widest">
-
-                        HALO, SAYA 👋
-
-                    </p>
-
-
-
-                    <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
-
-                        Nabilla
-
-                        <span class="text-transparent bg-clip-text
-                                     bg-gradient-to-r from-pink-500 to-rose-400">
-
-                            Sisilia
-
-                        </span>
-
-                    </h1>
-
-
-
-                    <p class="text-gray-600 text-lg leading-relaxed
-                              max-w-xl mb-8">
-
-                        Saya adalah mahasiswa Ilmu Komputer yang memiliki
-                        ketertarikan pada
-
-                        <span class="text-pink-600 font-semibold">
-                            UI/UX Design
-                        </span>,
-
-                        <span class="text-pink-600 font-semibold">
-                            Web Development
-                        </span>,
-
-                        dan teknologi.
-
-                    </p>
-
-
-
-                    <div class="flex flex-wrap gap-4">
-
-
-                        <a href="project.html"
-                           class="bg-pink-500 hover:bg-pink-600
-                                  text-white px-7 py-3 rounded-full
-                                  font-medium transition
-                                  shadow-lg shadow-pink-200">
-
-                            Lihat Project →
-
-                        </a>
-
-
-
-                        <a href="about.html"
-                           class="border border-pink-300
-                                  text-pink-600 hover:bg-pink-100
-                                  px-7 py-3 rounded-full
-                                  font-medium transition">
-
-                            Tentang Saya
-
-                        </a>
-
+                        <div class="flex gap-6 mt-10 text-gray-500 text-sm">
+                            <a href="https://www.instagram.com/billsptt/"
+                               target="_blank" rel="noopener noreferrer">
+                                Instagram ↗
+                            </a>
+                        </div>
                     </div>
 
+                    <div class="flex justify-center md:justify-end">
+                        <div class="profile-card">
+                            <div class="profile-avatar">
+                                <img src="Nabilla.jpg" alt="Foto Nabilla Sisilia">
+                            </div>
 
+                            <h2 class="text-2xl font-bold">Nabilla Sisilia</h2>
+                            <p class="text-gray-500 mt-2">Computer Science Student</p>
 
-                    <div class="flex gap-6 mt-10 text-gray-500 text-sm">
-
-
-                        <a href="https://www.instagram.com/billsptt/"
-                           class="hover:text-pink-500 transition">
-
-                            Instagram
-
-                        </a>
-
+                            <div class="flex gap-2 mt-5 justify-center">
+                                <span class="skill-tag">UI/UX</span>
+                                <span class="skill-tag">Web</span>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
+            </div>
+        </section>
 
+        <!-- ABOUT -->
+        <section id="about" class="section-padding bg-white">
+            <div class="max-w-6xl mx-auto px-6">
 
+                <div class="text-center mb-14">
+                    <p class="section-label">ABOUT ME</p>
+                    <h2 class="section-title">Kenalan dengan Saya 👋</h2>
+                    <p class="text-gray-500 mt-4">
+                        Sedikit cerita tentang saya dan ketertarikan saya.
+                    </p>
+                </div>
 
-                <div class="flex justify-center md:justify-end">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
 
-                    <div class="relative">
-
-
-                        <div class="absolute inset-0
-                                    bg-pink-300/40
-                                    blur-3xl rounded-full">
-                        </div>
-
-
-
-                        <div class="relative w-72 h-80 md:w-80 md:h-96
-                                    rounded-3xl
-                                    bg-white/80
-                                    backdrop-blur-md
-                                    border border-pink-200
-                                    flex flex-col items-center
-                                    justify-center
-                                    shadow-xl shadow-pink-100">
-
-
-                            <div class="w-32 h-32 rounded-full
-                                        bg-gradient-to-br
-                                        from-pink-400 to-rose-400
-                                        flex items-center justify-center
-                                        text-5xl font-bold text-white
-                                        mb-6
-                                        shadow-lg shadow-pink-200">
-
-                                N
-
+                    <div class="flex justify-center">
+                        <div class="about-card">
+                            <div class="profile-avatar">
+                                <img src="Nabilla.jpg" alt="Foto Nabilla Sisilia">
                             </div>
 
+                            <h3 class="text-2xl font-bold">Nabilla Sisilia</h3>
+                            <p class="text-gray-500 mt-2">Computer Science Student</p>
 
+                            <div class="flex gap-2 mt-5 justify-center">
+                                <span class="skill-tag">UI/UX</span>
+                                <span class="skill-tag">Web</span>
+                            </div>
+                        </div>
+                    </div>
 
-                            <h2 class="text-2xl font-bold text-gray-800">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-5">
+                            Halo, saya Nabilla! 💗
+                        </h3>
 
-                                Nabilla Sisilia
+                        <p class="text-gray-600 leading-relaxed mb-5">
+                            Saya merupakan mahasiswa Ilmu Komputer yang memiliki ketertarikan
+                            pada dunia teknologi, khususnya dalam bidang UI/UX Design dan
+                            Web Development.
+                        </p>
 
-                            </h2>
+                        <p class="text-gray-600 leading-relaxed mb-5">
+                            Saya senang mempelajari hal-hal baru dan mencoba menerapkannya
+                            melalui berbagai project. Bagi saya, teknologi bukan hanya
+                            tentang bagaimana sebuah sistem bekerja, tetapi juga bagaimana
+                            sistem tersebut dapat memberikan pengalaman yang baik bagi pengguna.
+                        </p>
 
+                        <div class="grid grid-cols-2 gap-4 mt-8">
+                            <div class="info-card">
+                                <p class="text-sm text-gray-400">Pendidikan</p>
+                                <p class="font-semibold mt-1">Ilmu Komputer</p>
+                            </div>
 
+                            <div class="info-card">
+                                <p class="text-sm text-gray-400">Fokus</p>
+                                <p class="font-semibold mt-1">UI/UX & Web</p>
+                            </div>
+                        </div>
+                    </div>
 
-                            <p class="text-gray-500 mt-2">
+                </div>
+            </div>
+        </section>
 
-                                Computer Science Student
+        <!-- PENDIDIKAN -->
+        <section id="pendidikan" class="section-padding">
+            <div class="max-w-6xl mx-auto px-6">
 
+                <div class="text-center mb-14">
+                    <p class="section-label">MY EDUCATION</p>
+                    <h2 class="section-title">Pendidikan</h2>
+                    <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
+                        Perjalanan pendidikan saya dari sekolah dasar hingga menempuh
+                        pendidikan di perguruan tinggi.
+                    </p>
+                </div>
+
+                <div class="max-w-5xl mx-auto space-y-6">
+
+                    <article class="education-card">
+                        <div class="education-logo">
+                            <img src="logo-undiksha.png" alt="Logo Universitas Pendidikan Ganesha">
+                        </div>
+                        <div class="text-center md:text-left">
+                            <span class="year-tag">2024 - Sekarang</span>
+                            <h3 class="text-2xl font-bold mt-3">Universitas Pendidikan Ganesha</h3>
+                            <p class="text-pink-600 font-medium mt-2">S1 Ilmu Komputer</p>
+                            <p class="text-gray-500 mt-2">Perguruan Tinggi</p>
+                        </div>
+                    </article>
+
+                    <article class="education-card">
+                        <div class="education-logo">
+                            <img src="logo-smk.png" alt="Logo SMK TI Bali Global Badung">
+                        </div>
+                        <div class="text-center md:text-left">
+                            <span class="year-tag">2021 - 2024</span>
+                            <h3 class="text-2xl font-bold mt-3">SMK TI Bali Global Badung</h3>
+                            <p class="text-pink-600 font-medium mt-2">Jurusan Multimedia</p>
+                            <p class="text-gray-500 mt-2">Sekolah Menengah Kejuruan</p>
+                        </div>
+                    </article>
+
+                    <article class="education-card">
+                        <div class="education-logo">
+                            <img src="logo_smpn_2_kutautara.png" alt="Logo SMPN 2 Kuta Utara">
+                        </div>
+                        <div class="text-center md:text-left">
+                            <span class="year-tag">2018 - 2021</span>
+                            <h3 class="text-2xl font-bold mt-3">SMPN 2 Kuta Utara</h3>
+                            <p class="text-pink-600 font-medium mt-2">Sekolah Menengah Pertama</p>
+                        </div>
+                    </article>
+
+                    <article class="education-card">
+                        <div class="education-logo">
+                            <span class="text-6xl">🎓</span>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <span class="year-tag">2012 - 2018</span>
+                            <h3 class="text-2xl font-bold mt-3">SD Negeri No. 2 Tibubeneng</h3>
+                            <p class="text-pink-600 font-medium mt-2">Sekolah Dasar</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT -->
+        <section id="project" class="section-padding bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+
+                <div class="text-center mb-14">
+                    <p class="section-label">MY PROJECTS</p>
+                    <h2 class="section-title">Project Saya 💗</h2>
+                    <p class="text-gray-500 mt-4 max-w-xl mx-auto">
+                        Beberapa project yang pernah saya kerjakan selama mempelajari
+                        teknologi dan desain.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <article class="project-card">
+                        <div class="project-cover bg-gradient-to-br from-pink-300 to-rose-400">🐾</div>
+                        <div class="p-6">
+                            <p class="project-category">UI/UX DESIGN</p>
+                            <h3 class="text-xl font-bold mb-3">Paws & Buds</h3>
+                            <p class="project-description">
+                                Konsep aplikasi pet sitting yang membantu mahasiswa menemukan
+                                layanan penitipan hewan yang aman dan terpercaya.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-cover bg-gradient-to-br from-rose-300 to-pink-400">🌱</div>
+                        <div class="p-6">
+                            <p class="project-category">UI/UX DESIGN</p>
+                            <h3 class="text-xl font-bold mb-3">Teba Berjejaring</h3>
+                            <p class="project-description">
+                                Prototype website untuk mendukung pengelolaan sampah organik
+                                dan pemanfaatan teba modern di lingkungan masyarakat Bali.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-cover bg-gradient-to-br from-pink-300 to-fuchsia-400">💻</div>
+                        <div class="p-6">
+                            <p class="project-category">WEB DEVELOPMENT</p>
+                            <h3 class="text-xl font-bold mb-3">Personal Portfolio</h3>
+                            <p class="project-description">
+                                Website portofolio pribadi yang dibuat menggunakan HTML
+                                dan Tailwind CSS dengan desain responsif.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-cover bg-gradient-to-br from-violet-300 to-purple-400">🛒</div>
+                        <div class="p-6">
+                            <p class="project-category">WEB DEVELOPMENT</p>
+                            <h3 class="text-xl font-bold mb-3">MyShop E-Commerce</h3>
+                            <p class="project-description mb-4">
+                                Prototipe aplikasi e-commerce berbasis React dengan katalog
+                                produk, detail produk, keranjang, checkout, pengelolaan
+                                produk, dan manajemen pesanan.
                             </p>
 
-
-
-                            <div class="flex gap-2 mt-5">
-
-
-                                <span class="px-3 py-1 text-xs rounded-full
-                                             bg-pink-100 text-pink-600">
-
-                                    UI/UX
-
-                                </span>
-
-
-                                <span class="px-3 py-1 text-xs rounded-full
-                                             bg-rose-100 text-rose-600">
-
-                                    Web
-
-                                </span>
-
-
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Tailwind CSS</span>
+                                <span class="skill-tag">Context API</span>
+                                <span class="skill-tag">Vite</span>
                             </div>
 
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://myshop-react-ashy.vercel.app/"
+                                   target="_blank" rel="noopener noreferrer"
+                                   class="primary-button text-sm">View Project →</a>
+
+                                <a href="https://myshop-react-ashy.vercel.app/admin/dashboard"
+                                   target="_blank" rel="noopener noreferrer"
+                                   class="admin-button">View Admin →</a>
+                            </div>
                         </div>
-
-                    </div>
+                    </article>
 
                 </div>
 
+                <!-- TO-DO LIST -->
+                <div id="todo" class="mt-24">
+                    <div class="text-center mb-10">
+                        <p class="section-label">JAVASCRIPT TASK</p>
+                        <h3 class="text-3xl md:text-4xl font-bold">My To-Do List 📝</h3>
+                        <p class="text-gray-500 mt-3">
+                            Tambahkan tugas yang ingin kamu kerjakan.
+                        </p>
+                    </div>
+
+                    <div class="max-w-2xl mx-auto bg-pink-50 p-6 md:p-8 rounded-3xl border border-pink-100 shadow-xl shadow-pink-100">
+                        <form id="taskForm" class="flex flex-col sm:flex-row gap-3">
+                            <input type="text" id="taskInput"
+                                   placeholder="Contoh: Mengerjakan tugas..."
+                                   class="task-input">
+
+                            <button type="submit" class="primary-button">Tambah</button>
+                        </form>
+
+                        <ul id="taskList" class="mt-6 space-y-3"></ul>
+                    </div>
+                </div>
+
             </div>
+        </section>
 
-        </div>
+        <!-- ORGANISASI -->
+        <section id="organisasi" class="section-padding">
+            <div class="max-w-6xl mx-auto px-6">
 
-    </section>
+                <div class="text-center mb-14">
+                    <p class="section-label">EXPERIENCE</p>
+                    <h2 class="section-title">Pengalaman Organisasi</h2>
+                    <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
+                        Beberapa pengalaman saya selama aktif dalam organisasi
+                        di lingkungan kampus.
+                    </p>
+                </div>
 
+                <div class="grid md:grid-cols-2 gap-8">
 
+                    <article class="organization-card">
+                        <img src="billa.jpeg" alt="Anggota Unit Kewirausahaan"
+                             class="organization-image">
+                        <div class="p-7">
+                            <span class="year-tag">Anggota</span>
+                            <h3 class="text-2xl font-bold mt-4">Unit Kewirausahaan</h3>
+                            <p class="text-pink-500 font-medium mt-1">Study Club FTK Undiksha</p>
+                            <p class="text-gray-500 mt-4 leading-relaxed">
+                                Berperan dalam membantu kegiatan unit kewirausahaan serta
+                                ikut mengembangkan ide kreatif dan program kerja organisasi.
+                            </p>
+                        </div>
+                    </article>
 
-    <section class="py-24 bg-white">
+                    <article class="organization-card">
+                        <img src="nabilla.jpeg" alt="Wakil Ketua Umum Study Club"
+                             class="organization-image">
+                        <div class="p-7">
+                            <span class="year-tag">Wakil Ketua Umum</span>
+                            <h3 class="text-2xl font-bold mt-4">Wakil Ketua Umum</h3>
+                            <p class="text-pink-500 font-medium mt-1">Study Club FTK Undiksha</p>
+                            <p class="text-gray-500 mt-4 leading-relaxed">
+                                Membantu ketua dalam mengoordinasikan kegiatan, mendukung
+                                setiap bidang, serta memastikan program kerja Study Club
+                                berjalan dengan baik.
+                            </p>
+                        </div>
+                    </article>
 
-        <div class="max-w-6xl mx-auto px-6">
+                </div>
+            </div>
+        </section>
 
-
-            <!-- Heading -->
-
-            <div class="text-center mb-14">
-
-                <p class="text-pink-500 font-semibold mb-2">
-
-                    WHAT I DO
-
+        <!-- CONTACT -->
+        <section id="contact" class="contact-section">
+            <div class="max-w-4xl mx-auto px-6 text-center text-white">
+                <p class="font-semibold mb-3 tracking-widest">LET'S CONNECT</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-5">Mari Berkolaborasi! 💗</h2>
+                <p class="text-pink-100 mb-8 max-w-xl mx-auto">
+                    Jangan ragu untuk menghubungi saya untuk berdiskusi atau
+                    berkolaborasi dalam sebuah project.
                 </p>
-
-
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
-
-                    Keahlian Saya
-
-                </h2>
-
-
-                <p class="text-gray-500 mt-4">
-
-                    Beberapa bidang yang sedang saya pelajari
-                    dan kembangkan.
-
-                </p>
-
+                <a href="https://wa.me/6285737237227?text=Halo%20Nabilla%2C%20saya%20tertarik%20untuk%20berdiskusi%20atau%20berkolaborasi."
+                   target="_blank" rel="noopener noreferrer"
+                   class="contact-cta">
+                    Hubungi Saya
+                </a>
             </div>
+        </section>
 
+    </main>
 
-
-            <div class="grid md:grid-cols-3 gap-6">
-
-
-                <div class="p-7 rounded-2xl
-                            bg-pink-50
-                            border border-pink-100
-                            hover:-translate-y-2
-                            hover:shadow-lg hover:shadow-pink-100
-                            transition duration-300">
-
-
-                    <div class="w-14 h-14 rounded-xl
-                                bg-pink-100
-                                flex items-center justify-center
-                                text-3xl mb-5">
-
-                        🎨
-
-                    </div>
-
-
-                    <h3 class="text-xl font-bold mb-3">
-
-                        UI/UX Design
-
-                    </h3>
-
-
-                    <p class="text-gray-500 leading-relaxed">
-
-                        Membuat desain antarmuka yang sederhana,
-                        menarik, dan mudah digunakan.
-
-                    </p>
-
-                </div>
-
-
-
-                <div class="p-7 rounded-2xl
-                            bg-rose-50
-                            border border-rose-100
-                            hover:-translate-y-2
-                            hover:shadow-lg hover:shadow-rose-100
-                            transition duration-300">
-
-
-                    <div class="w-14 h-14 rounded-xl
-                                bg-rose-100
-                                flex items-center justify-center
-                                text-3xl mb-5">
-
-                        💻
-
-                    </div>
-
-
-                    <h3 class="text-xl font-bold mb-3">
-
-                        Web Development
-
-                    </h3>
-
-
-                    <p class="text-gray-500 leading-relaxed">
-
-                        Mengembangkan website menggunakan HTML,
-                        CSS, JavaScript, dan teknologi web lainnya.
-
-                    </p>
-
-                </div>
-
-
-
-                <div class="p-7 rounded-2xl
-                            bg-pink-50
-                            border border-pink-100
-                            hover:-translate-y-2
-                            hover:shadow-lg hover:shadow-pink-100
-                            transition duration-300">
-
-
-                    <div class="w-14 h-14 rounded-xl
-                                bg-pink-100
-                                flex items-center justify-center
-                                text-3xl mb-5">
-
-                        🚀
-
-                    </div>
-
-
-                    <h3 class="text-xl font-bold mb-3">
-
-                        Technology
-
-                    </h3>
-
-
-                    <p class="text-gray-500 leading-relaxed">
-
-                        Tertarik mempelajari teknologi baru dan
-                        mengembangkan kemampuan di bidang komputer.
-
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <section id="contact"
-             class="py-24 bg-gradient-to-br
-                    from-pink-500 to-rose-400">
-
-
-        <div class="max-w-4xl mx-auto px-6 text-center text-white">
-
-
-            <p class="font-semibold mb-3 tracking-widest">
-
-                LET'S CONNECT
-
-            </p>
-
-
-            <h2 class="text-4xl font-bold mb-5">
-
-                Mari Berkolaborasi! 💗
-
-            </h2>
-
-
-            <p class="text-pink-100 mb-8 max-w-xl mx-auto">
-
-                Jangan ragu untuk menghubungi saya untuk berdiskusi
-                atau berkolaborasi dalam sebuah project.
-
-            </p>
-
-
-           <a href="https://wa.me/6285737237227?text=Halo%20Nabilla%2C%20saya%20tertarik%20untuk%20berdiskusi%20atau%20berkolaborasi." 
-               class="inline-block bg-white text-pink-600
-                      hover:bg-pink-50
-                      px-8 py-3 rounded-full
-                      font-semibold transition shadow-lg">
-
-                Hubungi Saya
-
-            </a>
-
-        </div>
-
-    </section>
-
-
-
-    <footer class="bg-white border-t border-pink-100 py-6">
-
-        <div class="text-center text-gray-500 text-sm">
-
-            © 2026 Nabilla Sisilia.
-            Made with 💗
-
-        </div>
-
+    <footer class="bg-white border-t border-pink-100 py-6 text-center text-gray-500 text-sm">
+        © 2026 Nabilla Sisilia. Made with 💗
     </footer>
 
-
+    <script src="script.js"></script>
 </body>
-
 </html>
